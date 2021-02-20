@@ -182,7 +182,6 @@ public class CalculadorImpuestos {
         RangoImpuesto rango = null;
         // TODO: Buscar el rangoImpuesto. Use el método contieneA(valor)
         for (RangoImpuesto r: rangosImpuesto) {
-           System.out.println(r.contieneA(valor));
            if (r.contieneA(valor)){
                rango = r;
            }
@@ -206,8 +205,6 @@ public class CalculadorImpuestos {
         // Calcula el impuesto según el precio del vehículo
         RangoImpuesto rango = buscarRangoImpuesto(precio);
         // TODO: Encontrar el valor del pago de impuesto de acuerdo a los datos de entrada
-
-        System.out.println(rango.darPorcentaje());
         pago = darVehiculoActual().darPrecio() * (rango.darPorcentaje() /100);
 
         if (descProntoPago) {
